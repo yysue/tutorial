@@ -1,0 +1,34 @@
+[mysqld_multi]
+#mysqld  = /usr/local/mysql/bin/mysqld_safe
+mysqld  = /usr/local/mysql/bin/mysqld
+mysqladmin = /usr/local/mysql/bin/mysqladmin
+user  = root
+#password    = 123456
+log  = /usr/local/mysql/mysqld_multi.log
+
+# cat /usr/local/mysql/etc/mysqld_multi.cnf 
+[mysqld3376]
+port  = 3376
+basedir = /usr/local/mysql
+datadir = /data/mysql/mysql3376/data
+socket = /tmp/mysql3376.sock
+tmpdir = /data/mysql/mysql3376/tmp
+log-bin = /data/mysql/mysql3376/logs/mysql-bin
+innodb_data_home_dir = /data/mysql/mysql3376/data
+innodb_log_group_home_dir = /data/mysql/mysql3376/logs
+log-error = /data/mysql/mysql3376/logs/error.log
+user  = mysql
+
+[mysqld3377]
+port            = 3377
+basedir = /usr/local/mysql
+datadir = /data/mysql/mysql3377/data
+socket = /tmp/mysql3377.sock
+tmpdir = /data/mysql/mysql3377/tmp
+log-bin = /data/mysql/mysql3377/logs/mysql-bin
+innodb_data_home_dir = /data/mysql/mysql3377/data
+innodb_log_group_home_dir = /data/mysql/mysql3377/logs
+log-error = /data/mysql/mysql3377/logs/error.log
+user            = mysql
+
+

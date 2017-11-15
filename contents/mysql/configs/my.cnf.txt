@@ -1,0 +1,129 @@
+##
+## created by yejr(http://imysql.com, imysql@imysql.com), 2012/11/12
+##
+## my.cnf example
+##
+## 适用场景:
+## 1. 整个服务器专用于MySQL
+## 2. MySQL中，绝大多数引擎是InnoDB
+## 3. 物理服务器内存大于4GB
+## 4. MySQL版本在5.0 ~ 5.6之间
+## 
+## 注意事项:
+## 1. innodb_buffer_pool_size 设置为物理内存的60%左右, 例如物理内存 4G, 
+##    则 innodb_buffer_pool_size = 2400M, 请根据实际情况自行调整
+## 2. tmp_table_size 和 max_heap_table_size 大小要一致, 且不能分配过大, 建议不超过 128MB
+## 3. max_connections 不要设置过大, 建议不超过256, 除非特别清楚怎么设置
+## 4. 个别MySQL版本中, default_store_engine 选项可能会提示不存在, 改成 default_table_type 即可
+## 4. 本模板仅供参考, 本人对使用此配置文件可能产生的风险不负责任, 若不清楚可及时联系我
+##
+
+#my.cnf
+[client]
+port            = 3376
+socket          = /tmp/mysql3376.sock
+
+[mysql]
+prompt="(\\u:imysql.com:\D)[\\d]> "
+pager="less -i -n -S"
+#tee="/data/mysql/mysql3376/query.log"
+no-auto-rehash
+
+[mysqld]
+#misc
+user = mysql
+basedir = /usr/local/mysql
+datadir = /data/mysql/mysql3376/data
+tmpdir = /data/mysql/mysql3376/tmp
+port = 3376
+socket = /tmp/mysql3376.sock
+max_allowed_packet = 32M
+ft_min_word_len = 4
+event_scheduler = 1
+default_table_engine = innodb
+
+#performance
+net_read_timeout = 60
+open_files_limit = 8192
+back_log = 150
+max_connections = 60
+max_connect_errors = 100000
+external-locking = FALSE
+performance_schema = 0
+
+#logs
+log-output=file
+slow_query_log = 1
+log-bin = /data/mysql/mysql3376/logs/mysql-bin
+log-error = error.log
+slow_query_log_file = slow.log
+log_warnings = 2
+#pid-file = /data/mysql/mysql3376/mysql.pid
+long_query_time = 1
+log-slow-admin-statements = 1
+log-queries-not-using-indexes = 1
+log-slow-slave-statements = 1
+binlog_cache_size = 4M 
+#max_binlog_cache_size = 2G
+
+#buffers & cache
+table_cache = 2048
+table_definition_cache = 2048
+table_open_cache = 2048
+
+max_heap_table_size = 64M
+tmp_table_size = 64M
+sort_buffer_size = 2M
+join_buffer_size = 2M
+thread_cache_size = 256
+query_cache_size = 8M
+query_cache_limit = 256K
+query_cache_min_res_unit = 512
+thread_stack = 192K
+key_buffer_size = 8M
+read_buffer_size = 1M
+read_rnd_buffer_size = 16M
+bulk_insert_buffer_size = 64M
+
+#myisam
+myisam_sort_buffer_size = 128M
+myisam_max_sort_file_size = 10G
+myisam_repair_threads = 1
+myisam_recover
+
+#binlog & replicate
+server-id=1003376
+skip-slave-start = 1
+log-slave-updates  = 1
+expire_logs_days = 2
+relay-log-purge = 1
+sync_binlog = 1
+binlog_format = MIXED
+max_binlog_size = 1G
+binlog_cache_size = 4M 
+max_binlog_cache_size = 2G
+
+#innodb
+innodb_data_home_dir = /data/mysql/mysql3376/data
+innodb_log_group_home_dir = /data/mysql/mysql3376/logs
+innodb_additional_mem_pool_size = 16M
+innodb_buffer_pool_size = 8G
+innodb_data_file_path = ibdata1:100M:autoextend
+innodb_file_io_threads = 4
+innodb_thread_concurrency = 20
+innodb_flush_log_at_trx_commit = 1
+innodb_log_buffer_size = 16M
+innodb_log_file_size = 256M
+innodb_log_files_in_group = 2
+innodb_max_dirty_pages_pct = 50
+innodb_lock_wait_timeout = 120
+innodb_file_per_table = 1
+innodb_rollback_on_timeout
+innodb_status_file = 1
+transaction_isolation = READ-COMMITTED 
+innodb_flush_method = O_DIRECT
+innodb-support-xa = 0
+
+[mysqldump]
+quick
+max_allowed_packet = 32M

@@ -1,0 +1,2 @@
+http://blog.csdn.net/lambert310/article/details/52412059
+https://stackoverflow.com/questions/43029672/unable-to-find-protobuf-include-directory-during-install-mysql-connector-over-pi
