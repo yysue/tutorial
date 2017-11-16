@@ -6,7 +6,15 @@
 
 [2017-11-01-了解布隆过滤器](contents/docs/2017-11-01-understand-Bloom-Filter.md)
 
+[2017-11-11-Vagrant工具的使用介绍](contents/docs/2017-11-11-vagrant.md)
+
+[2017-11-12-Vagrant搭建MySQL环境](contents/docs/2017-11-12-vagrant-mysql.md)
+
 [2017-11-14-印象笔记搜索技巧](contents/docs/2017-11-14-evernote-tips.md)
+
+[2017-11-16-计算机科学知识卡片](contents/docs/2017-11-16-computer-science-flash-cards.md)
+
+[2017-11-16-CentOS下pyenv快速安装Python方案](contents/python/docs/2017-11-16-pyenv-mirrors.md)
 
 # 2017-10
 
@@ -24,11 +32,7 @@
 
 [2017-11-10-shuangpin.md](contents/docs/2017-11-10-shuangpin.md)
 
-[2017-11-11-vagrant.md](contents/docs/2017-11-11-vagrant.md)
-
 [2017-11-11-windows-del.md](contents/docs/2017-11-11-windows-del.md)
-
-[2017-11-12-vagrant-mysql.md](contents/docs/2017-11-12-vagrant-mysql.md)
 
 [2017-11-13-online-api-collect.md](contents/docs/2017-11-13-online-api-collect.md)
 

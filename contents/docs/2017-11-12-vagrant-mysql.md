@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Vagrant搭建MySQL环境"
+date: 2017-11-12 08:21:49
+categories: Tools
+tags: Tools, Vagrant, MySQL
+---
 
 
 # 操作
@@ -147,7 +154,7 @@ vagrant up node141
 
 ## 生成box
 
-[CentOS6.x安装后的设置](https://gitee.com/yysue/tutorial/blob/master/linux/docs/2017-10-30-centos6.x-setting.md)
+[CentOS6.x安装后的设置](https://gitee.com/yysue/tutorial/blob/master/contents/linux/docs/2017-10-30-centos6.x-setting.md)
 
 ```shell
 # 如果网络模式中使用 private_network 的话，
