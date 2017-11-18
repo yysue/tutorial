@@ -1,3 +1,12 @@
+---
+layout: post
+title: "python软件包安装和开发工具"
+date: 2017-10-16 08:21:49
+categories: Python
+tags: Python
+---
+
+
 # python软件包安装和开发工具
 
 # Python版本

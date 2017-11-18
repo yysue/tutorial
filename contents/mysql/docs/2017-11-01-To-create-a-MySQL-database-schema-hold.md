@@ -1,3 +1,12 @@
+---
+layout: post
+title: "打造扛得住的MySQL数据库架构"
+date: 2017-11-01 08:21:49
+categories: MySQL
+tags: MySQL
+---
+
+
 打造扛得住的MySQL数据库架构
 
 # 影响数据库性能的原因

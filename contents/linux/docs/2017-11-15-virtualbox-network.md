@@ -1,3 +1,10 @@
+---
+layout: post
+title: "VirtualBox网络接入方式"
+date: 2017-11-15 08:21:49
+categories: Linux
+tags: Linux
+---
 
 
 

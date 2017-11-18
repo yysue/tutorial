@@ -1,3 +1,11 @@
+---
+layout: post
+title: "新概念英语第二册第10课：Not For Jazz 不适宜弹爵士乐"
+date: 2017-10-29 08:21:49
+categories: English
+tags: English
+---
+
 new concept english
 
 新概念英语第二册第10课：Not For Jazz 不适宜弹爵士乐

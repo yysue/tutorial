@@ -1,3 +1,11 @@
+---
+layout: post
+title: "MySQL启动方式"
+date: 2017-10-02 08:21:49
+categories: MySQL
+tags: MySQL
+---
+
 # 启动方式
 
 ##几个问题

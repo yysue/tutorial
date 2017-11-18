@@ -1,3 +1,11 @@
+---
+layout: post
+title: "通过python将阿里云DNS解析作为DDNS使用"
+date: 2017-10-27 08:21:49
+categories: Linux
+tags: Linux
+---
+
 # 通过python将阿里云DNS解析作为DDNS使用
 
 

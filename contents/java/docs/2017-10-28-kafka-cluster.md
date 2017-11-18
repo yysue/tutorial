@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Kafka集群"
+date: 2017-10-28 08:21:49
+categories: Java
+tags: Java
+---
+
+
 官方文档：<http://kafka.apache.org/0101/documentation.html>
 
 # 软件环境

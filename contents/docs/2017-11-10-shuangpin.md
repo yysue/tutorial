@@ -1,3 +1,12 @@
+---
+layout: post
+title: "双拼自然码方案"
+date: 2017-11-10 08:21:49
+categories: Else
+tags: Else
+---
+
+
 # 双拼自然码方案
 
 a ang an ao ai

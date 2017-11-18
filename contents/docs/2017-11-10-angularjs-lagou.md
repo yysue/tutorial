@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Angularjs入门Demo"
+date: 2017-11-10 08:21:49
+categories: Java
+tags: Java
+---
 
 
 Angularjs

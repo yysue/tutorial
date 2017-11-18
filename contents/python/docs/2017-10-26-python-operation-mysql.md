@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Python操作数据库"
+date: 2017-10-26 08:21:49
+categories: Python, MySQL
+tags: Python, MySQL
+---
 
 
 Python2.7

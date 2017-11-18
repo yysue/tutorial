@@ -1,3 +1,11 @@
+---
+layout: post
+title: "MySQL体系结构"
+date: 2017-10-02 08:21:49
+categories: MySQL
+tags: MySQL
+---
+
 # MySQL体系结构
 
 ## 架构图
@@ -120,7 +128,7 @@ LVS持5台WEB，后端：1组Cache3组DB
 https://dev.mysql.com/doc/refman/5.6/en/storage-requirements.html
 
 > 数据类型
-> 
+>
 > 为了数据库跑的更快，选择一个合适的数据类型
 > 实质是：节省IO
 > 所有的SQL调优99%都是节省IO

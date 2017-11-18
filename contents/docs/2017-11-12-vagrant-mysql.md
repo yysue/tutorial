@@ -160,8 +160,14 @@ vagrant up node141
 # 如果网络模式中使用 private_network 的话，
 # 在打包之前需要清除一下private_network的设置，避免不必要的错误：
 # 不管是不是private_network，建议都要清除一下
-rm -f /etc/udev/rule.d/70-persistent-net.rules
+rm -f /etc/udev/rules.d/70-persistent-net.rules
+# or
 >/etc/udev/rules.d/70-persistent-net.rules
+
+# 避免后面遇到后面提到的问题
+sed -i '/UUID/d' /etc/sysconfig/network-scripts/ifcfg-eth0
+sed -i '/HWADDR/d' /etc/sysconfig/network-scripts/ifcfg-eth0
+sed -i "$ a ARPCHECK=no" /etc/sysconfig/network-scripts/ifcfg-eth0
 
 # 关闭当前操作的虚拟机
 shutdown -h now
@@ -202,7 +208,16 @@ vagrant reload
 
 # 遇到的问题
 
-CentOS 6.5/Linux 重启网卡报错 Determining if ip address x.x.x.x is already in use
+1. CentOS 6.5/Linux 重启网卡报错 Determining if ip address x.x.x.x is already in use
 
-![](images/vagrant2_09.png) 
+   ![](images/vagrant2_09.png) 
 
+2. 用户没有权限
+
+   ![](images/vagrant2_10.png)
+
+   原因是/tmp权限被修改了
+
+   ```shell
+   chmod a+rwx,o+t /tmp
+   ```

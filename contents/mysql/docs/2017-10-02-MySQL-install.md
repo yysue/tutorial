@@ -1,3 +1,11 @@
+---
+layout: post
+title: "MySQL安装"
+date: 2017-10-02 08:21:49
+categories: MySQL
+tags: MySQL
+---
+
 # MySQL安装
 
 # 学习
