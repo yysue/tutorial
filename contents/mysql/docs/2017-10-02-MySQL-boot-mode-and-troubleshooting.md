@@ -8,7 +8,7 @@ tags: MySQL
 
 # 启动方式
 
-##几个问题
+## 几个问题
 
 1. /etc/init.d/mysql 这个脚本从哪来
 
